@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- REACT LIBRARY -->
+    <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+    <!-- REACT DOM LIBRARY -->
+    <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script type="text/babel">
+        // Exemplo Conceitual de Composição
+        function Header() { /* ... */ return <h1>Título do Site</h1>; }
+        function Sidebar() { /* ... */ return <aside>Menu</aside>; }
+        function Content() { /* ... */ return <main><p>Conteúdo principal.</p></main>; }
+        function Footer() { /* ... */ return <footer>Copyright ©</footer>; }
+
+        function App() { // Componente principal compondo outros
+            return (
+                <> {/* Usamos Fragmento para retornar múltiplos elementos */}
+                    <Header /> {/* Usando Header como tag */}
+                    <Sidebar /> {/* Usando Sidebar como tag */}
+                    <Content /> {/* Usando Content como tag */}
+                    <Footer /> {/* Usando Footer como tag */}
+                </>
+            );
+        }
+    </script>
+</body>
+
+</html>
